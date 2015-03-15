@@ -1,0 +1,1 @@
+PODS_STRIPE_SWIFTSAMPLETESTS_STRIPE_OTHER_LDFLAGS = -framework "Foundation" -framework "Security"
