@@ -1,12 +1,15 @@
 PODS:
+  - PaymentKit (1.1.1)
   - Stripe (3.1.0):
     - Stripe/Core (= 3.1.0)
   - Stripe/Core (3.1.0)
 
 DEPENDENCIES:
+  - PaymentKit
   - Stripe
 
 SPEC CHECKSUMS:
+  PaymentKit: f77b4d5cee45947949429c3d587e8eb160a3c9e2
   Stripe: aaa174b50fac40a16958cbc892457a241d0b4b08
 
 COCOAPODS: 0.36.0

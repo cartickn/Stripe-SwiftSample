@@ -1,0 +1,6 @@
+framework module Pods_Stripe_SwiftSampleTests {
+  umbrella header "Pods-Stripe-SwiftSampleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

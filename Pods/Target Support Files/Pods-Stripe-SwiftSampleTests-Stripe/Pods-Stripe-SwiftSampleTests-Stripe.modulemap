@@ -1,0 +1,6 @@
+framework module Stripe {
+  umbrella header "Pods-Stripe-SwiftSampleTests-Stripe-umbrella.h"
+
+  export *
+  module * { export * }
+}

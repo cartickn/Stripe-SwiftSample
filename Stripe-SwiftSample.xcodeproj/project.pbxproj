@@ -13,7 +13,8 @@
 		25F560791AB5F7870001AE89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25F560781AB5F7870001AE89 /* Images.xcassets */; };
 		25F5607C1AB5F7870001AE89 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25F5607A1AB5F7870001AE89 /* LaunchScreen.xib */; };
 		25F560881AB5F7870001AE89 /* Stripe_SwiftSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F560871AB5F7870001AE89 /* Stripe_SwiftSampleTests.swift */; };
-		542B6F1B522B72225455D7F5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8BA86DD609C4FE3625112D /* libPods.a */; };
+		25F5609F1AB60C7F0001AE89 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5609E1AB60C7F0001AE89 /* Alamofire.swift */; };
+		3208623B45D50B9CFD33D182 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE026761A36D5F05DE45F58 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,9 @@
 		25F560861AB5F7870001AE89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25F560871AB5F7870001AE89 /* Stripe_SwiftSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stripe_SwiftSampleTests.swift; sourceTree = "<group>"; };
 		25F560911AB5F8B10001AE89 /* Stripe-SwiftSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stripe-SwiftSample-Bridging-Header.h"; sourceTree = "<group>"; };
-		CD8BA86DD609C4FE3625112D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		25F5609B1AB60A340001AE89 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		25F5609E1AB60C7F0001AE89 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		3AE026761A36D5F05DE45F58 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF36768E11B5923EFC18A1BB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				542B6F1B522B72225455D7F5 /* libPods.a in Frameworks */,
+				3208623B45D50B9CFD33D182 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +97,7 @@
 		25F5606E1AB5F7870001AE89 /* Stripe-SwiftSample */ = {
 			isa = PBXGroup;
 			children = (
+				25F5609D1AB60C6E0001AE89 /* Vendor */,
 				25F560711AB5F7870001AE89 /* AppDelegate.swift */,
 				25F560731AB5F7870001AE89 /* ViewController.swift */,
 				25F560751AB5F7870001AE89 /* Main.storyboard */,
@@ -130,10 +134,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		25F5609D1AB60C6E0001AE89 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				25F5609E1AB60C7F0001AE89 /* Alamofire.swift */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
 		3811BB330805F8B29741A576 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CD8BA86DD609C4FE3625112D /* libPods.a */,
+				25F5609B1AB60A340001AE89 /* PassKit.framework */,
+				3AE026761A36D5F05DE45F58 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,6 +163,7 @@
 				25F560691AB5F7870001AE89 /* Frameworks */,
 				25F5606A1AB5F7870001AE89 /* Resources */,
 				DAB58DAE72EBF0492FC9A897 /* Copy Pods Resources */,
+				22F3EE50B94822016A0483EC /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,6 +265,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		22F3EE50B94822016A0483EC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DAB58DAE72EBF0492FC9A897 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25F5609F1AB60C7F0001AE89 /* Alamofire.swift in Sources */,
 				25F560741AB5F7870001AE89 /* ViewController.swift in Sources */,
 				25F560721AB5F7870001AE89 /* AppDelegate.swift in Sources */,
 			);
