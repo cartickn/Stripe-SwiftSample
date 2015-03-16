@@ -12,4 +12,5 @@ target 'Stripe-SwiftSampleTests' do
 end
 
 pod 'Stripe'
+pod 'Stripe/ApplePay'
 pod 'PaymentKit'

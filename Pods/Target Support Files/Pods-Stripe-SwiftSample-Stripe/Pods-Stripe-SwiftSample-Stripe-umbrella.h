@@ -1,5 +1,8 @@
 #import <UIKit/UIKit.h>
 
+#import "STPAPIClient+ApplePay.h"
+#import "STPPaymentPresenter.h"
+#import "Stripe+ApplePay.h"
 #import "STPAPIClient.h"
 #import "STPBankAccount.h"
 #import "STPCard.h"

@@ -2,11 +2,14 @@ PODS:
   - PaymentKit (1.1.1)
   - Stripe (3.1.0):
     - Stripe/Core (= 3.1.0)
+  - Stripe/ApplePay (3.1.0):
+    - Stripe/Core
   - Stripe/Core (3.1.0)
 
 DEPENDENCIES:
   - PaymentKit
   - Stripe
+  - Stripe/ApplePay
 
 SPEC CHECKSUMS:
   PaymentKit: f77b4d5cee45947949429c3d587e8eb160a3c9e2

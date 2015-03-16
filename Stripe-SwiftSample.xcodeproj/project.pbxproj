@@ -446,6 +446,11 @@
 				CODE_SIGN_ENTITLEMENTS = "Stripe-SwiftSample/Stripe-SwiftSample.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"STRIPE_ENABLE_APPLEPAY=1",
+				);
 				INFOPLIST_FILE = "Stripe-SwiftSample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -464,6 +469,11 @@
 				CODE_SIGN_ENTITLEMENTS = "Stripe-SwiftSample/Stripe-SwiftSample.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"STRIPE_ENABLE_APPLEPAY=1",
+				);
 				INFOPLIST_FILE = "Stripe-SwiftSample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
